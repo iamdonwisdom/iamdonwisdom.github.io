@@ -10,19 +10,20 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 body{
     background:#0d1117;
     color:white;
-    line-height:1.6;
+    line-height:1.7;
 }
 
 header{
     background:#161b22;
-    padding:20px;
     text-align:center;
+    padding:25px;
+    border-bottom:2px solid #00ff88;
 }
 
 header h1{
@@ -30,17 +31,43 @@ header h1{
 }
 
 nav{
-    margin-top:10px;
+    margin-top:15px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 15px;
+    margin:0 12px;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h2{
+    color:#00ff88;
+    font-size:2.5rem;
+}
+
+.hero p{
+    max-width:700px;
+    margin:20px auto;
+}
+
+.button{
+    display:inline-block;
+    margin:10px;
+    padding:12px 24px;
+    background:#00ff88;
+    color:black;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
 }
 
 section{
-    padding:60px 10%;
+    padding:50px 10%;
 }
 
 h2{
@@ -51,8 +78,12 @@ h2{
 .project-card{
     background:#161b22;
     padding:20px;
-    margin:15px 0;
     border-radius:10px;
+    margin-bottom:20px;
+}
+
+.project-card h3{
+    color:#00ff88;
 }
 
 .skills{
@@ -67,24 +98,22 @@ h2{
     border-radius:5px;
 }
 
-button{
-    background:#00ff88;
-    color:black;
-    border:none;
-    padding:12px 25px;
-    border-radius:5px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-button:hover{
-    opacity:0.9;
-}
-
 footer{
+    background:#161b22;
     text-align:center;
     padding:20px;
-    background:#161b22;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    .hero h2{
+        font-size:2rem;
+    }
 }
 </style>
 </head>
@@ -104,31 +133,32 @@ footer{
     </nav>
 </header>
 
-<section style="text-align:center; padding:100px 20px;">
-    <h1 style="font-size:3rem; color:#00ff88;">
-        Cybersecurity Portfolio
-    </h1>
+<section class="hero">
+    <h2>Cybersecurity Portfolio</h2>
 
-    <p style="font-size:1.2rem; margin-top:20px;">
+    <p>
         Building practical cybersecurity skills through hands-on projects,
-        network analysis, Python development, and security research.
+        network analysis, Python development, Linux administration,
+        and security research.
     </p>
 
-    <br>
+    <a class="button" href="https://github.com/iamdonwisdom" target="_blank">
+        GitHub
+    </a>
 
-    <a href="https://github.com/iamdonwisdom" target="_blank">
-        <button>View GitHub</button>
+    <a class="button" href="https://www.linkedin.com/in/ede-chidozie-9728652a9" target="_blank">
+        LinkedIn
     </a>
 </section>
 
 <section id="about">
     <h2>About Me</h2>
+
     <p>
-        My name is Ede Chidozie Philip, an aspiring cybersecurity professional
-        with a strong interest in network security, Linux administration,
+        My name is Ede Chidozie Philip. I am an aspiring cybersecurity
+        professional with interests in network security, Linux,
         Python programming, ethical hacking, and security operations.
-        I use this portfolio to showcase my cybersecurity projects,
-        hands-on labs, and continuous learning journey.
+        This portfolio showcases my projects, labs, and learning journey.
     </p>
 </section>
 
@@ -151,17 +181,26 @@ footer{
 
     <div class="project-card">
         <h3>Port Scanner</h3>
-        <p>Python-based network port scanner for identifying open ports.</p>
+        <p>Python-based network port scanner.</p>
+        <a class="button" href="https://github.com/iamdonwisdom/port-scanner" target="_blank">View Project</a>
     </div>
 
     <div class="project-card">
         <h3>URL Obfuscation Detector</h3>
-        <p>Tool for detecting suspicious and obfuscated URLs.</p>
+        <p>Detects suspicious and obfuscated URLs.</p>
+        <a class="button" href="https://github.com/iamdonwisdom/url-obfuscation-detector" target="_blank">View Project</a>
     </div>
 
     <div class="project-card">
         <h3>Log Analyzer</h3>
-        <p>Security log analysis tool for identifying suspicious activity.</p>
+        <p>Analyzes logs for suspicious activity.</p>
+        <a class="button" href="https://github.com/iamdonwisdom/log-analyzer" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Cybersecurity Portfolio Website</h3>
+        <p>Personal portfolio hosted with GitHub Pages.</p>
+        <a class="button" href="https://github.com/iamdonwisdom/iamdonwisdom.github.io" target="_blank">View Project</a>
     </div>
 </section>
 
@@ -179,21 +218,8 @@ footer{
 <section id="contact">
     <h2>Contact</h2>
 
-    <p>
-        GitHub:
-        <a href="https://github.com/iamdonwisdom" target="_blank">
-            github.com/iamdonwisdom
-        </a>
-    </p>
-
-    <br>
-
-    <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/ede-chidozie-9728652a9" target="_blank">
-            View My LinkedIn Profile
-        </a>
-    </p>
+    <p>GitHub: https://github.com/iamdonwisdom</p>
+    <p>LinkedIn: https://www.linkedin.com/in/ede-chidozie-9728652a9</p>
 </section>
 
 <footer>
