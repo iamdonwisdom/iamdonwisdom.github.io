@@ -1,35 +1,27 @@
-Cybersecurity Portfolio Website
+# Cybersecurity Log Analyzer
 
-Personal cybersecurity portfolio website hosted with GitHub Pages.
+## Overview
+A Python-based log analysis tool that detects suspicious login activity and potential brute-force attacks from system logs.
 
-Features
+## Features
+- Failed login detection
+- Brute-force attack identification
+- Top IP analysis
+- Security reporting
 
-- Professional cybersecurity portfolio
-- GitHub and LinkedIn integration
-- Cybersecurity project showcase
-- Learning log
-- Mobile-friendly design
-- GitHub Pages hosting
+## Technologies
+- Python
+- Regular Expressions
+- Collections Counter
 
-Live Website
+## Usage
 
-https://iamdonwisdom.github.io
+```bash
+python3 log_analyzer.py
+```
 
-Technologies Used
-
-- HTML
-- CSS
-- GitHub Pages
-
-Projects Featured
-
-- Port Scanner
-- URL Obfuscation Detector
-- Log Analyzer
-- Cybersecurity Portfolio Website
-
-Author
-
-Ede Chidozie Philip
-
-Aspiring Cybersecurity Professional
+## Future Improvements
+- GUI Dashboard
+- Email Alerts
+- Threat Intelligence Integration
+- Export Reports to CSV
