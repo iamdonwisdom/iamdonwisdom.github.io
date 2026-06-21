@@ -112,10 +112,6 @@ section h2{
     margin-bottom:20px;
 }
 
-.about p{
-    max-width:900px;
-}
-
 .skills{
     display:flex;
     flex-wrap:wrap;
@@ -153,9 +149,16 @@ section h2{
     margin-bottom:10px;
 }
 
-.project-card p{
-    color:#d1d5db;
-    margin-bottom:15px;
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    border:1px solid var(--border);
 }
 
 .cert-card{
@@ -166,10 +169,6 @@ section h2{
     border:1px solid var(--border);
 }
 
-ul{
-    margin-left:20px;
-}
-
 footer{
     text-align:center;
     background:#0f172a;
@@ -178,20 +177,16 @@ footer{
     border-top:2px solid var(--accent);
 }
 
-footer p{
-    color:#9ca3af;
-}
-
 @media(max-width:768px){
 
-    nav a{
-        display:block;
-        margin:10px 0;
-    }
+nav a{
+display:block;
+margin:10px 0;
+}
 
-    .hero h2{
-        font-size:2rem;
-    }
+.hero h2{
+font-size:2rem;
+}
 
 }
 
@@ -210,9 +205,11 @@ Aspiring Penetration Tester | Cybersecurity Enthusiast
 
 <nav>
 <a href="#about">About</a>
+<a href="#career">Career Goals</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
-<a href="#learning">Learning Log</a>
+<a href="#screenshots">Showcase</a>
+<a href="#learning">Learning</a>
 <a href="#certifications">Certifications</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -221,14 +218,13 @@ Aspiring Penetration Tester | Cybersecurity Enthusiast
 
 <section class="hero">
 
-<h2>Cybersecurity Portfolio</h2>
+<h2>Penetration Testing & Cybersecurity Portfolio</h2>
 
 <p>
-Building practical cybersecurity skills through hands-on projects,
-Python automation, network analysis, Linux administration,
-vulnerability assessment, and web application security testing.
-My goal is to become a professional Penetration Tester and
-Red Team Operator.
+Building offensive and defensive cybersecurity tools through
+Python development, vulnerability assessment,
+network security testing, Linux administration,
+and web application security research.
 </p>
 
 <a class="button"
@@ -244,31 +240,67 @@ LinkedIn
 </a>
 
 <a class="button"
-href="#contact">
-Contact Me
+href="resume.pdf"
+target="_blank">
+Download Resume
 </a>
 
 </section>
 
-<section id="about" class="about">
+<section style="text-align:center;">
+
+<img src="images/profile.jpg"
+alt="Ede Chidozie Philip"
+style="
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #22c55e;">
+
+<h2 style="margin-top:15px;">
+Ede Chidozie Philip
+</h2>
+
+<p style="color:#9ca3af;">
+Aspiring Penetration Tester | Security Researcher
+</p>
+
+</section>
+
+<section id="about">
 
 <h2>About Me</h2>
 
 <p>
 My name is Ede Chidozie Philip.
 I am an aspiring cybersecurity professional focused on
-penetration testing, network security, Linux,
-vulnerability assessment, and Python security automation.
+penetration testing, vulnerability assessment,
+network security, Linux administration,
+and Python security automation.
 
-I actively build security tools and complete practical labs
-to strengthen both offensive and defensive security skills.
-My projects showcase hands-on experience with network scanning,
-web application security testing, threat detection,
-log analysis, and security research.
+I actively build security tools and practical labs
+to strengthen my offensive security skills while
+maintaining a strong understanding of defensive security concepts.
 </p>
 
 </section>
 
+<section id="career">
+
+<h2>Career Goals</h2>
+
+<p>
+My long-term goal is to become a professional
+Penetration Tester and Red Team Operator.
+
+I am continuously developing practical skills in
+network security, web application security,
+vulnerability assessment, security automation,
+and ethical hacking through hands-on projects and labs.
+</p>
+
+</section>
 <section id="skills">
 
 <h2>Technical Skills</h2>
@@ -282,11 +314,14 @@ log analysis, and security research.
 <div class="skill">Networking</div>
 <div class="skill">Nmap</div>
 <div class="skill">Wireshark</div>
+<div class="skill">TCP/IP</div>
 <div class="skill">Web Security</div>
 <div class="skill">Penetration Testing</div>
 <div class="skill">Vulnerability Assessment</div>
-<div class="skill">Log Analysis</div>
 <div class="skill">Security Research</div>
+<div class="skill">Log Analysis</div>
+<div class="skill">Network Reconnaissance</div>
+<div class="skill">Kali Linux</div>
 
 </div>
 
@@ -299,83 +334,152 @@ log analysis, and security research.
 <div class="project-grid">
 
 <div class="project-card">
+
 <h3>Network Vulnerability Scanner</h3>
+
 <p>
-Python-based scanner featuring service enumeration,
-risk classification, Nmap integration,
-and automated report generation.
+Python-based vulnerability scanner featuring
+Nmap integration, service enumeration,
+risk classification, and automated report generation.
 </p>
+
 <a class="button"
 href="https://github.com/iamdonwisdom/Network-Vulnerability-Scanner"
 target="_blank">
 View Project
 </a>
+
 </div>
 
 <div class="project-card">
+
 <h3>Web Application Scanner</h3>
+
 <p>
-Web security assessment tool capable of analyzing
+Security assessment tool designed to analyze
 security headers, robots.txt files,
-directory exposure, and web risks.
+directory exposure, and web application risks.
 </p>
+
 <a class="button"
 href="https://github.com/iamdonwisdom/Web_App_Scanner"
 target="_blank">
 View Project
 </a>
+
 </div>
 
 <div class="project-card">
+
 <h3>SSH Brute Force Detector</h3>
+
 <p>
-Threat detection tool that analyzes authentication
-logs and identifies SSH brute-force attacks.
+Threat detection tool that identifies
+failed SSH login attempts and brute-force attacks
+through authentication log analysis.
 </p>
+
 <a class="button"
 href="https://github.com/iamdonwisdom/ssh-bruteforce-detector"
 target="_blank">
 View Project
 </a>
+
 </div>
 
 <div class="project-card">
+
 <h3>URL Obfuscation Detector</h3>
+
 <p>
-Security tool that detects suspicious URL
-obfuscation techniques used in phishing attacks.
+Python security tool that detects suspicious
+URL obfuscation techniques commonly used
+in phishing and social engineering attacks.
 </p>
+
 <a class="button"
 href="https://github.com/iamdonwisdom/url-obfuscation-detector"
 target="_blank">
 View Project
 </a>
+
 </div>
 
 <div class="project-card">
+
 <h3>Log Analyzer</h3>
+
 <p>
-Python-based SOC monitoring tool used for
-security event analysis and threat detection.
+SOC-style monitoring tool used to analyze
+authentication logs, identify suspicious activity,
+and generate threat summaries.
 </p>
+
 <a class="button"
 href="https://github.com/iamdonwisdom/log-analyzer"
 target="_blank">
 View Project
 </a>
+
 </div>
 
 <div class="project-card">
+
 <h3>Port Scanner</h3>
+
 <p>
-Python network reconnaissance tool used to identify
-open ports and exposed services.
+Network reconnaissance tool developed in Python
+to discover open ports and exposed network services.
 </p>
+
 <a class="button"
 href="https://github.com/iamdonwisdom/port-scanner"
 target="_blank">
 View Project
 </a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="screenshots">
+
+<h2>Project Showcase</h2>
+
+<div class="gallery">
+
+<div>
+<img src="images/network-scanner.png"
+alt="Network Vulnerability Scanner">
+<p style="margin-top:10px;">
+Network Vulnerability Scanner
+</p>
+</div>
+
+<div>
+<img src="images/web-scanner.png"
+alt="Web Application Scanner">
+<p style="margin-top:10px;">
+Web Application Scanner
+</p>
+</div>
+
+<div>
+<img src="images/ssh-detector.png"
+alt="SSH Brute Force Detector">
+<p style="margin-top:10px;">
+SSH Brute Force Detector
+</p>
+</div>
+
+<div>
+<img src="images/log-analyzer.png"
+alt="Log Analyzer">
+<p style="margin-top:10px;">
+Log Analyzer
+</p>
 </div>
 
 </div>
@@ -387,29 +491,57 @@ View Project
 <h2>Learning Journey</h2>
 
 <ul>
-<li>Network Reconnaissance Lab</li>
-<li>Nmap Service Enumeration</li>
-<li>Linux Fundamentals</li>
+
+<li>Network Reconnaissance Lab Exercises</li>
+
+<li>Nmap Service Enumeration and Version Detection</li>
+
+<li>Linux Fundamentals and System Administration</li>
+
 <li>Web Application Security Testing</li>
+
 <li>Python Security Tool Development</li>
+
 <li>Network Packet Analysis</li>
-<li>Git & GitHub Workflow</li>
+
 <li>Vulnerability Assessment Techniques</li>
+
+<li>Git & GitHub Version Control Workflows</li>
+
+<li>Log Monitoring and Threat Detection</li>
+
+<li>Cybersecurity Portfolio Development</li>
+
 </ul>
 
 </section>
-
 <section id="certifications">
 
-<h2>Certifications</h2>
+<h2>Certifications & Training</h2>
 
 <div class="cert-card">
-Currently pursuing cybersecurity certifications and practical lab experience.
+<strong>Cybersecurity Self-Learning Program</strong><br>
+Ongoing hands-on cybersecurity training through practical labs and projects.
 </div>
 
 <div class="cert-card">
-Future Certifications:
-CompTIA Security+, eJPT, PNPT, CEH
+<strong>Network Reconnaissance Labs</strong><br>
+Hands-on experience with network discovery, service enumeration, and security assessment.
+</div>
+
+<div class="cert-card">
+<strong>Linux Fundamentals</strong><br>
+System administration, command-line operations, and security-focused Linux usage.
+</div>
+
+<div class="cert-card">
+<strong>Python Security Tool Development</strong><br>
+Development of custom cybersecurity tools for automation and threat analysis.
+</div>
+
+<div class="cert-card">
+<strong>Planned Certifications</strong><br>
+CompTIA Security+ • eJPT • PNPT • OSCP (Long-Term Goal)
 </div>
 
 </section>
@@ -419,34 +551,74 @@ CompTIA Security+, eJPT, PNPT, CEH
 <h2>Contact</h2>
 
 <p>
-<strong>GitHub:</strong>
-https://github.com/iamdonwisdom
+Interested in cybersecurity, penetration testing,
+security research, collaboration opportunities,
+and professional networking.
 </p>
 
 <br>
 
 <p>
-<strong>LinkedIn:</strong>
-https://www.linkedin.com/in/ede-chidozie-9728652a9
+<strong>GitHub:</strong><br>
+<a href="https://github.com/iamdonwisdom"
+target="_blank"
+style="color:#22c55e;">
+github.com/iamdonwisdom
+</a>
 </p>
 
 <br>
 
 <p>
-Open to networking, collaboration, cybersecurity projects,
-and internship opportunities.
+<strong>LinkedIn:</strong><br>
+<a href="https://www.linkedin.com/in/ede-chidozie-9728652a9"
+target="_blank"
+style="color:#22c55e;">
+linkedin.com/in/ede-chidozie-9728652a9
+</a>
+</p>
+
+<br>
+
+<p>
+<strong>Portfolio Website:</strong><br>
+<a href="https://iamdonwisdom.github.io"
+target="_blank"
+style="color:#22c55e;">
+iamdonwisdom.github.io
+</a>
 </p>
 
 </section>
 
 <footer>
 
+<h3 style="color:#22c55e;">
+Ede Chidozie Philip
+</h3>
+
+<br>
+
 <p>
-© 2026 Ede Chidozie Philip
+Cybersecurity Portfolio
 </p>
 
 <p>
-Cybersecurity Portfolio | Aspiring Penetration Tester
+Aspiring Penetration Tester | Security Researcher
+</p>
+
+<br>
+
+<p>
+Building practical cybersecurity skills through
+continuous learning, hands-on projects,
+and real-world security labs.
+</p>
+
+<br>
+
+<p>
+© 2026 Ede Chidozie Philip. All Rights Reserved.
 </p>
 
 </footer>
